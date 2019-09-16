@@ -1,24 +1,30 @@
 version: '3.0'
 services:
-  web:
-    image: alexcheng/magento2
-    ports:
-      - "80:80"
-    links:
-      - db
-    env_file:
-      - env
-  db:
-    image: mysql:5.6.23
-    volumes:
-      - db-data:/var/lib/mysql/data
-    env_file:
-      - env
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8580:80"
-    links:
-      - db     
+ web:
+   image: alexcheng/magento2
+   ports:
+     - "80:80"
+   links:
+     - db
+   env_file:
+     - env
+   volumes:     
+     - magento-data:/var/www/html
+     - C:/Users/laura/Desktop/digital/magento/app/code:/var/www/html/app/code
+     - C:/Users/laura/Desktop/digital/magento/app/design/frontend/W2:/var/www/html/app/design/frontend/W2
+ db:
+   image: mysql:5.6.23
+   volumes:
+     - db-data:/var/lib/mysql/data
+   env_file:
+     - env
+ phpmyadmin:
+   image: phpmyadmin/phpmyadmin
+   ports:
+     - "8580:80"
+   links:
+     - db    
 volumes:
-  db-data: 
+ db-data:
+ magento-data:
+
