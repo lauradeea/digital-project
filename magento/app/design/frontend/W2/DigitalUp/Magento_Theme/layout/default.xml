@@ -1,0 +1,78 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!--<update handle="default_head_blocks"/>-->
+    <body>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">250</argument>
+                <argument name="logo_img_height" xsi:type="number">250</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceContainer name="header.container">
+            <container name="header.top.actions" htmlTag="div" htmlClass="header-wrapper">
+                <container name="header.bootstrap.container" htmlTag="div" htmlClass="container-fluid">
+                    <container name="header.logo.row" htmlTag="div" htmlClass="row no-gutters full">
+                        <container name="header.logo.col" htmlTag="div"
+                                   htmlClass="col-12 col-sm-12 align-items-center justify-content-center"
+                                   before="-"/>
+                    </container>
+                    <container name="header.row" htmlTag="div" htmlClass="row no-gutters full">
+                        <container name="header.left.col" htmlTag="div"
+                                   htmlClass="col-6 col-md-4 d-flex align-items-center justify-content-center"/>
+                        <block class="Magento\Framework\View\Element\Template" name="custom-menu"
+                               template="Magento_Theme::custom/menu.phtml" after="-"/>
+
+                        <container name="header.center.col" after="header.left.col" htmlTag="div"
+                                   htmlClass="col-6 col-md-4 d-flex align-items-center justify-content-sm-center justify-content-center"/>
+
+                        <container name="header.right.col" after="header.center.col" htmlTag="div"
+                                   htmlClass="col col-md-4 d-flex align-items-center justify-content-sm-center justify-content-center"/>
+                    </container>
+                </container>
+            </container>
+        </referenceContainer>
+
+        <move element="logo" destination="header.logo.col"/>
+        <move element="custom-menu" destination="header.left.col"/>
+        <move element="navigation.sections" destination="header.center.col"/>
+        <move element="top.search" destination="header.right.col"/>
+        <move element="minicart" destination="header.right.col"/>
+
+
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="slider"
+                   template="Magento_Theme::custom/slider.phtml"/>
+        </referenceContainer>
+
+        <referenceContainer name="main.content">
+            <block class="Magento\Framework\View\Element\Template" name="home"
+                   template="Magento_Theme::custom/homepage.phtml" after="-"/>
+        </referenceContainer>
+
+        <referenceContainer name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/>
+        <referenceBlock name="advanced-search-link" remove="true"/>
+        <referenceBlock name="page.main.title" remove="true"/>
+
+        <referenceContainer name="footer-container">
+            <container name="custom.footer.container" htmlTag="div" htmlClass="footer"/>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+
+        </referenceContainer>
+
+        <move element="footer" destination="custom.footer.container"/>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="new" template="Magento_Theme::custom/footer.phtml"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="report.bugs" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+        </referenceContainer>
+
+    </body>
+</page>

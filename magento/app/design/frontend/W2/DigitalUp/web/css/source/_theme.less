@@ -1,0 +1,148 @@
+.container {
+  max-width: 1460px !important;
+}
+
+.flex(@align: initial; @justify: initial; @direction: initial) when (@align = initial) and (@justify = initial) and (@direction = initial) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//header
+.page-header {
+  .logo {
+    width: 100%;
+    max-width: 100%;
+    .flex(center, initial, column);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .nav-sections {
+    margin-bottom: 0;
+    nav.navigation {
+      background: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  .block-search {
+    width: 5rem;
+    div#search-custom {
+      position: relative;
+      form#search_mini_form {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 250px;
+      }
+    }
+  }
+  .menu {
+    height: 100%;
+    width: auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #636363;
+    transition: 0.5s;
+    padding-top: 60px;
+    #close {
+      margin: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    ul.menu-custom {
+      list-style-type: none;
+    }
+    li a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 15px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+    }
+    li a:hover {
+      color: #d0e0f1;
+    }
+  }
+}
+
+.column.main {
+  min-height: 60px;
+}
+
+.blocks {
+  background-color: #636363;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 400px;
+}
+
+//footer
+footer#footer {
+  .information-content {
+    padding-bottom: 2rem;
+  }
+  .info-links {
+    a {
+      color: #000;
+    }
+  }
+
+  .footer.content {
+    .block {
+      float: initial;
+    }
+  }
+  .block.newsletter {
+    width: 100%;
+  }
+  .social {
+    margin: 2rem 0 0 2rem;
+    img {
+      background: #ccc;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      padding: 8px;
+      font-size: 16px;
+      width: 40px;
+      margin: 1rem 0 0 0;
+    }
+  }
+  .footer-bottom-bar.footer-padding {
+    background:#000;
+    padding:10px;
+    color:#fff;
+    img {
+      width: 60px;
+      margin: 0 1rem;
+      float: right;
+    }
+  }
+}
+button.action.subscribe.primary{
+  background: #000;
+}
+.footer.content .links {
+  padding: 0 0 0 0;
+}
+.footer.content {
+  padding-bottom: 0;
+
+
+}
+
+h5 {
+  font-size: 2.25rem !important;
+}
+
+p, a, li ,address{
+  font-size: 1.5rem;
+}

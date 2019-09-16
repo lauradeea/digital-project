@@ -1,0 +1,126 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+$cmsHelper = $block->getLayout()->createBlock('Magento\Cms\Block\Block');
+?>
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="footer-column first">
+                    <div class="logo-footer">
+                        <img src="<?= $block->getViewFileUrl('images/logo.png') ?>" alt="tile image"/>
+                    </div>
+                    <div class="social">
+                        <img src="<?= $block->getViewFileUrl('images/instagram.png') ?>" alt="tile image"/>
+                        <img src="<?= $block->getViewFileUrl('images/facebook-logo.png') ?>" alt="tile image"/>
+                        <img src="<?= $block->getViewFileUrl('images/pinterest.png') ?>" alt="tile image"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="footer-column second">
+                    <div class="links">
+                        <h5 class="information-content">
+                            Πλήροφορίες
+                        </h5>
+                        <div class="info-links">
+                            <ul class="linkmenu">
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="footer-column third">
+                    <div class="links">
+                        <h5 class="information-content">
+                            Επικοινωνία
+                        </h5>
+                        <div class="info-links">
+                            <ul class="linkmenu">
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                                <a href="/#">
+                                    <li>Lorem Ipsum</li>
+                                </a>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="footer-column fourth">
+                    <div class="links">
+                        <h5 class="information-content">
+                            Newsletter
+                        </h5>
+                        <div class="info-links">
+                            <p>Μείνετε συντονισμένοι για περισσότερα νέα και προσφορές!</p>
+                        </div>
+                        <div class="subs">
+                            <?php
+                            echo $this->getLayout()->createBlock("Magento\Newsletter\Block\Subscribe")->setTemplate("Magento_Newsletter::subscribe.phtml")->toHtml();
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-bar footer-padding">
+        <div class="row">
+            <div class="col-sm-6 col-6">
+                <address class="copyright">
+                    Development & Marketing by DigitalUp
+                </address>
+            </div>
+            <div class="col-sm-6 col-6">
+                <img src="<?= $block->getViewFileUrl('images/maestro.png') ?>" alt="tile image"/>
+                <img src="<?= $block->getViewFileUrl('images/mastercard.png') ?>" alt="tile image"/>
+                <img src="<?= $block->getViewFileUrl('images/mastercard-securecode.png') ?>" alt="tile image"/>
+                <img src="<?= $block->getViewFileUrl('images/visa.png') ?>" alt="tile image"/>
+                <img src="<?= $block->getViewFileUrl('images/verified-by-visa.png') ?>" alt="tile image"/>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+

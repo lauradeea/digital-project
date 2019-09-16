@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+?>
+
+
+<div id="btn-menu"><a href="javascript:void(0)"><img src="<?= $block->getViewFileUrl('images/menu.png') ?>"
+                                                     alt="tile image"/></div>
+<div id="custom-menu">
+    <div class="menu">
+        <ul class="menu-custom" style="display: none;">
+            <div id="close"><img src="<?= $block->getViewFileUrl('images/close.png') ?>" alt="tile image"/></div>
+            <li><a href="#">Custom 1</a></li>
+            <li><a href="#">Custom 2</a></li>
+            <li><a href="#">Custom 3</a></li>
+            <li><a href="#">Custom 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    require(['jquery'], function ($) {
+        $(document).ready(function () {
+            $('#btn-menu').click(function () {
+                $('#custom-menu').show('slow');
+                $('.menu-custom').css("display", "block" );
+                $('.menu-custom').css("width", "350px");
+            });
+            $('#close').click(function () {
+                $('#custom-menu').hide();
+            });
+        });
+    });
+
+
+</script>
